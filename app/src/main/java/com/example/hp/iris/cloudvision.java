@@ -1,5 +1,6 @@
 package com.example.hp.iris;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -50,6 +51,7 @@ public class cloudvision extends AppCompatActivity implements  TextToSpeech.OnIn
     TextToSpeech tvvs2;
     ArrayList<String> arrayList=new ArrayList<String>();
     private static final String CLOUD_VISION_API_KEY = "AIzaSyADtvO9_3vK3TkkHW5imY4t25AXaE8Gkis";
+    //private static final String CLOUD_VISION_API_KEY = "AIzaSyA9QTLqarpVUbwJo4lmvRytydD_l5buea4";
     public static final String FILE_NAME = "temp.jpg";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
@@ -112,6 +114,7 @@ public class cloudvision extends AppCompatActivity implements  TextToSpeech.OnIn
         });
 
     }
+    @SuppressLint("StaticFieldLeak")
     private void callCloudVision(final Bitmap bitmap) throws IOException
     {
         // Switch text to loading

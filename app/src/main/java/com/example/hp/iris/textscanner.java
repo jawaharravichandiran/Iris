@@ -32,9 +32,7 @@ import java.util.HashMap;
 
 import static com.example.hp.iris.MainActivity.c;
 
-/**
- * Created by HP on 8/26/2017.
- */
+
 
 public class textscanner extends AppCompatActivity implements TextToSpeech.OnInitListener,TextToSpeech.OnUtteranceCompletedListener{
     SurfaceView cameraView;

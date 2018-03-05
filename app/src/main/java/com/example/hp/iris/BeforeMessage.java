@@ -122,9 +122,9 @@ public class BeforeMessage extends AppCompatActivity implements TextToSpeech.OnI
     private void speakWords(String speech) {
 
         // speak straight away
-        if(myTTS != null)
+        if(tvvs != null)
         {
-            myTTS.speak(speech, TextToSpeech.QUEUE_FLUSH, null);
+            tvvs.speak(speech, TextToSpeech.QUEUE_FLUSH, null);
         }
     }
     private void showResults(Bundle results) {
@@ -159,7 +159,8 @@ public class BeforeMessage extends AppCompatActivity implements TextToSpeech.OnI
         if (requestCode == MY_DATA_CHECK_CODE) {
             if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
                 // the user has the necessary data - create the TTS
-                myTTS = new TextToSpeech(this, this);
+//                myTTS = new TextToSpeech(this, this);
+                  tvvs = new TextToSpeech(this,this);
             } else {
                 // no data - install it now
                 Intent installTTSIntent = new Intent();
@@ -198,8 +199,8 @@ public class BeforeMessage extends AppCompatActivity implements TextToSpeech.OnI
     public void onInit(int status) {
         try {
             if (status == TextToSpeech.SUCCESS) {
-                if (myTTS.isLanguageAvailable(Locale.US) == TextToSpeech.LANG_AVAILABLE)
-                    myTTS.setLanguage(Locale.US);
+                if (tvvs.isLanguageAvailable(Locale.US) == TextToSpeech.LANG_AVAILABLE)
+                    tvvs.setLanguage(Locale.US);
             } else if (status == TextToSpeech.ERROR) {
                 Toast.makeText(this, "Sorry! Text To Speech failed...",
                         Toast.LENGTH_LONG).show();

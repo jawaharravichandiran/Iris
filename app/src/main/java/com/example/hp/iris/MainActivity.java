@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements  TextToSpeech.OnI
                 try {
                     try {
                         sleep(1000);
-                        speakWords("Tap on the screen to enable mic");
+                        speakWords(" Hi i am IRIS Tap on the screen to enable mic");
                     } catch (InterruptedException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
